@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="Untitled-1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+</head>
+<body>
+    <div class="card">
+    <div class="header">
+        <h2>cruds</h2>
+        <p>create read update search</p>
+    </div>
+    <div class="inputs">
+        <input type="text"  id="title" placeholder="title">
+        <div class="totals">
+        <input type="number" onkeyup="getTotals()" id="prix" placeholder="prix">
+        <input type="number" onkeyup="getTotals()" id="taxe" placeholder="taxe">
+        <input type="number" onkeyup="getTotals()" id="ads" placeholder="ads">
+        <input type="number" onkeyup="getTotals()" id="discount" placeholder="discount">
+        <small id="total"></small>
+        </div>  
+        <input type="number"  id="count" placeholder="count">
+        <input type="text"  id="category" placeholder="category">
+        <button id="submit"> create </button>
+
+
+    </div>
+
+    <div class="outputs">
+        <div class="serchbloc">
+            <input type="text" placeholder="Search" id="search">
+            <div class="btnsearch">
+                <button id="search_name"> serch by name </button>
+                <button id="search_category"> serch by category </button>
+</div>
+</div>
+<table>
+    <tr>
+    <th>id</th>    
+    <th>title</th>    
+
+    <th>prix</th>
+    <th>taxe</th>
+    <th>ads</th>
+    <th>dicount</th>
+    <th>total</th>
+    <th>category</th>
+    <th>update</th>
+    <th>delete</th>    
+    </tr>
+    <tbody id="tbody">
+    
+                 
+    </tbody>
+
+
+
+</table>
+</div>
+    </div>
+    
+
+    <script src="Untitled-1.js"> </script>
+</body>
+</html>
