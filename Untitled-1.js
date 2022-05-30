@@ -88,7 +88,15 @@ function showData(){
         <td><button id="delete" onclick="delete_item(${i})"> delete</button></td>
              </tr>
         `;
+
+        
         document.getElementById('tbody').innerHTML = table;
+        let btn_delete = document.getElementById('deletAll');
+        if(datapro.length > 1){
+            btn_delete.innerHTML = `<button> delete All</button>` ;
+        }else{
+            btn_delete.innerHTML = '';  
+        }
     }}
 
 function updete_item(i){
@@ -110,5 +118,7 @@ function delete_item(i){
     localStorage.product = JSON.stringify(datapro);
     showData();
 }
+
+
 
 
