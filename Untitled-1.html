@@ -31,11 +31,11 @@
 
     <div class="outputs">
         <div class="serchbloc">
-            <input type="text" placeholder="Search" id="search">
+            <input type="text" placeholder="Search" onkeyup="search_value(this.value)" id="search">
             <div class="btnsearch">
-                <button id="search_name"> serch by name </button>
-                <button id="search_category"> serch by category </button>
-            </div>
+                <button onclick="getSearchmood(this.id)" id="search_name"> serch by name </button>
+                <button onclick="getSearchmood(this.id)" id="search_category"> serch by category </button>
+
         </div>
         <div id="deletAll"> </div>
 <table>
