@@ -101,8 +101,8 @@ function showData(){
         
         document.getElementById('tbody').innerHTML = table;
         let btn_delete = document.getElementById('deletAll');
-        if(datapro.length > 1){
-            btn_delete.innerHTML = `<button> delete All</button>` ;
+        if(datapro.length > 0){
+            btn_delete.innerHTML = `<button onclick = " delete_all()"> delete All</button>` ;
         }else{
             btn_delete.innerHTML = '';  
         }
@@ -125,6 +125,12 @@ function updete_item(i){
 function delete_item(i){
     datapro.splice(i, 1);
     localStorage.product = JSON.stringify(datapro);
+    showData();
+}
+
+function delete_all(){
+    localStorage.clear();
+    datapro.splice(0);
     showData();
 }
 
