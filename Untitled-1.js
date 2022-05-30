@@ -43,10 +43,19 @@ submit.onclick = function(){
         category : category.value,
     }
     if(mood == "create"){
-        datapro.push(newPro);
-        localStorage.setItem('product',     JSON.stringify(datapro)     );
+        if(newPro.count > 1){
+            for(let i = 0; i < newPro.count; i++){
+               datapro.push(newPro);
+               localStorage.setItem('product',     JSON.stringify(datapro)     );            
+            }
+
+        }else{
+            datapro.push(newPro); 
+            localStorage.setItem('product',     JSON.stringify(datapro)     );            
+        }
         clearData();
-        showData();    
+        showData();
+   
     }else{
         datapro[temp] = newPro;
         mood = "create";
